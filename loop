@@ -1,0 +1,14 @@
+void main(){
+
+  //for loop
+  int sum=0;
+  List<int>num=[1,2,3,4,5];   //list or array
+  int len =num.length;
+  
+  for(var i=1; i<=10; i++)
+  {
+    sum=sum+1;
+  }
+  
+  print("summation=$sum");
+}
