@@ -1,0 +1,57 @@
+void main()
+{
+  print("hello tanvir");
+  print("\nhow are you?");
+  
+  print(4);
+  print(3.15);
+  print(true);
+  
+  int a=4;
+  print(a);
+  
+  double b=31.2558;
+  print(b);
+  
+  String name= "sayed";
+  print(name);
+  
+  bool isAlive=true;
+  print(isAlive);
+  
+  var newVariable=(false);
+  print(newVariable);
+  
+  int a1=0x3A22;
+  print(a1);
+  double b1=1.325;
+  print(b1);
+  
+  //type casting
+  
+   String x= '231';
+   int xInt= int.parse(x);
+   xInt=xInt+1;
+   print(xInt);
+  
+   int y=123;
+   String y1= y.toString();
+   print (y1);
+  
+  //string literal
+  
+    String s1="hello";
+    String s2="hi there";
+    String s3="how are you tanvir";
+    print(s3);
+  
+    String line="Hello there"+"I am tanvir";
+  
+  
+  //string interpolation
+  
+   String name="Tanvir";
+   print("My name is" +name);
+   print("My name is $name");
+  
+}
