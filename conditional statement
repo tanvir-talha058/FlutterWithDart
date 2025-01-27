@@ -1,7 +1,6 @@
 void main(){
   
   //conditional statement 
-  
   double cgpa=3.33;
   if(cgpa>=3.50)
   {
