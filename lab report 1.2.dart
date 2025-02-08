@@ -1,24 +1,25 @@
-<<<<<<< HEAD
 abstract class Employee {
   String name;
   double salary;
   String id;
-  int working_exp;
+  int workingExp;
 
-  Employee(this.name, this.salary, this.id, this.working_exp);
+  Employee(this.name, this.salary, this.id, this.workingExp);
+
 
   void display() {
-    print("Name: $name");
+    print("\nName: $name");
     print("ID: $id");
     print("Salary: $salary BDT");
-    print("Experience: $working_exp years");
+    print("Experience: $workingExp years");
   }
+  
 
   void increment() {
-    if (working_exp > 10) {
-      salary += salary * 0.10;
-    } else if (working_exp > 4) {
-      salary += salary * 0.05;
+    if (workingExp > 10) {
+      salary *= 1.10; 
+    } else if (workingExp > 4) {
+      salary *= 1.05; 
     }
   }
 
@@ -28,36 +29,37 @@ abstract class Employee {
     return "C";
   }
 
-  void responsibility(); 
+
+  void responsibility();
 }
 
 
 class Manager extends Employee {
   String branch;
-  int working_hour;
+  int workingHour;
 
-  Manager(String name, double salary, String id, int working_exp, this.branch, this.working_hour)
-      : super(name, salary, id, working_exp);
+  Manager(String name, double salary, String id, int workingExp, this.branch, this.workingHour)
+      : super(name, salary, id, workingExp);
 
   @override
   void responsibility() {
-    print("Manager Responsibility: branch operations.");
+    print("Responsibility: Manages overall branch operations.");
   }
 }
-
 
 class Cashier extends Employee {
   String branch;
-  int working_hour;
+  int workingHour;
 
-  Cashier(String name, double salary, String id, int working_exp, this.branch, this.working_hour)
-      : super(name, salary, id, working_exp);
+  Cashier(String name, double salary, String id, int workingExp, this.branch, this.workingHour)
+      : super(name, salary, id, workingExp);
 
   @override
   void responsibility() {
-    print("Cashier Responsibility: Handles transactions..");
+    print("Responsibility: Handles customer transactions and billing.");
   }
 }
+
 
 void main() {
   Manager manager = Manager("Tanvir", 65000, "M001", 12, "Satkhira", 8);
@@ -71,92 +73,7 @@ void main() {
   cashier.display();
   print("Category: ${cashier.category()}");
   cashier.responsibility();
-
-
-  manager.increment();
-  cashier.increment();
-
-  print("\nAfter Increment:");
-  manager.display();
-  print("New Category: ${manager.category()}");
-
-  cashier.display();
-  print("New Category: ${cashier.category()}");
-}
-=======
-abstract class Employee {
-  String name;
-  double salary;
-  String id;
-  int working_exp;
-
-  Employee(this.name, this.salary, this.id, this.working_exp);
-
-  void display() {
-    print("Name: $name");
-    print("ID: $id");
-    print("Salary: $salary BDT");
-    print("Experience: $working_exp years");
-  }
-
-  void increment() {
-    if (working_exp > 10) {
-      salary += salary * 0.10;
-    } else if (working_exp > 4) {
-      salary += salary * 0.05;
-    }
-  }
-
-  String category() {
-    if (salary > 60000) return "A";
-    if (salary > 40000) return "B";
-    return "C";
-  }
-
-  void responsibility(); 
-}
-
-
-class Manager extends Employee {
-  String branch;
-  int working_hour;
-
-  Manager(String name, double salary, String id, int working_exp, this.branch, this.working_hour)
-      : super(name, salary, id, working_exp);
-
-  @override
-  void responsibility() {
-    print("Manager Responsibility: branch operations.");
-  }
-}
-
-
-class Cashier extends Employee {
-  String branch;
-  int working_hour;
-
-  Cashier(String name, double salary, String id, int working_exp, this.branch, this.working_hour)
-      : super(name, salary, id, working_exp);
-
-  @override
-  void responsibility() {
-    print("Cashier Responsibility: Handles transactions..");
-  }
-}
-
-void main() {
-  Manager manager = Manager("Tanvir", 65000, "M001", 12, "Satkhira", 8);
-  Cashier cashier = Cashier("Talha", 45000, "C001", 6, "Khulna", 6);
-
-  print("\nBefore Increment:");
-  manager.display();
-  print("Category: ${manager.category()}");
-  manager.responsibility();
-
-  cashier.display();
-  print("Category: ${cashier.category()}");
-  cashier.responsibility();
-
+ 
 
   manager.increment();
   cashier.increment();
@@ -168,4 +85,3 @@ void main() {
   cashier.display();
   print("New Category: ${cashier.category()}");
 }
->>>>>>> b17e8f04922cc46143a322a15f5c5a9b3e74fb3c
