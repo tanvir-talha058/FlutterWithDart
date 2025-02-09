@@ -10,7 +10,7 @@ void main(){
     print("not eligable for scholaship");
   }
   
-  //for loop
+  //for Loop
   
   int sum=0;
   List<int>num=[1,2,3,4,5]; //list or array
