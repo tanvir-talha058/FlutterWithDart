@@ -9,4 +9,6 @@ void main(){
   print(value1.isFinite);
   print(value2.isInfinite);
   print(value2.isEven);
+
+  print(value2.runtimeType);
 }
