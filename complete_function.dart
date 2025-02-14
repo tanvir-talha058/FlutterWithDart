@@ -3,7 +3,6 @@ int add (int a, int b){
   return total;
 
 }
-
 //parameter and no return type
 
 void mul(int a, int b){
