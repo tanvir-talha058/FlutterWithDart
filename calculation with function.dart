@@ -3,6 +3,7 @@ void calculalateInterest(double principal, double rate, double time){
   print("simple interest is $interest");
 }
 
+
 void main(){
   double principal=5000;
   double time=4;
