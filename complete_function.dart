@@ -18,7 +18,7 @@ String greet(){
   return greet;
 }
 
-//no paremeter and no return type
+//no paremeter and no return type 
 
 void greetings(){
   print("hello tanviir");
